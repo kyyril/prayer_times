@@ -8,7 +8,7 @@ function App() {
   const prayerTime = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
 
   useEffect(() => {
-    fetch(`http://api.aladhan.com/v1/timingsByAddress?address=${term}`)
+    fetch(`https://api.aladhan.com/v1/timingsByAddress?address=${term}`)
       .then((res) => res.json())
       .then((res) => setData(res.data));
   }, [term]);
